@@ -9,12 +9,16 @@ phases:
       - echo "Nothing to do in the pre_build phase..."
   build:
     commands:
-      - echo "Build started on `date`"
+      - echo "Build started on $(date)"
   post_build:
     commands:
-      - echo "Build completed on `date`"
+      - echo "Build completed on $(date)"
 
 artifacts:
   files:
-    - sample.war
-
+    - target/sample.war
+    - appspec.yml
+    - scripts/before_install.sh
+    - scripts/after_install.sh
+    - scripts/start_server.sh
+    - scripts/stop_server.sh
