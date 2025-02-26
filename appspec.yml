@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: target/sample.war
-    destination: /home/ec2-user/apache-tomcat-9.0.78/webapps/
+    destination: /home/ec2-user/apache-tomcat-9.0.100/webapps/
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
